@@ -1,0 +1,90 @@
+<nb-layout style="margin: 0; padding: 0">
+  <nb-layout-column class="wrapper" style="margin: 0; padding: 0">
+    <header>
+      <a href="" routerLink="/museums">
+        <div class="logo"></div>
+      </a>
+    </header>
+
+    
+
+    <div class="content">
+
+      <h1>buy ticket</h1>
+
+      <div class="tour-info">
+        <p style="font-weight: bold; letter-spacing: 1.3px; color: #E5E5E5; margin: 0;">TOUR INFORMATION</p>
+        <h1 id="tour-name">
+          <span class="explore"> explore <br /> </span> {{ museumName }}
+        </h1>
+        <p><span style="font-weight: bold; color: #c6c6c6; letter-spacing: 1.5px; font-family: 'Castilon';">Start:</span> {{ time }}</p>
+        <p><span style="font-weight: bold; color: #c7c7c7; letter-spacing: 1.5px; font-family: 'Castilon';">Duration:</span> {{ tour===undefined ? "" : tour.duration }} hours</p>
+      </div>     
+
+      <div class="left-div">
+       
+
+        <div class="card-info">
+          <p class="selected" style="color: #161B1C; font-weight: bold; letter-spacing: 1.3px;">CARD INFORMATION</p>
+
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            status="basic"
+            placeholder="Cardholder Name"
+            [(ngModel)]="cardholder"
+          />
+
+          <input
+            type="text"
+            nbInput
+            fullWidth
+            status="basic"
+            placeholder="Card Number"
+            [(ngModel)]="cardNumber"
+          />
+
+          <input type="text" nbInput status="basic" style="margin-right: 5px;" placeholder="Exp. Date" [(ngModel)] = "exp"/>
+
+          <nb-select placeholder="Card Type" style="margin: 5px 0" [(ngModel)]="type">
+            <nb-option value="visa">Visa</nb-option>
+            <nb-option value="mastercard">MasterCard</nb-option>
+            <nb-option value="american-express">AmericanExpress</nb-option>
+          </nb-select>
+
+          <input type="password" nbInput status="basic" placeholder="PIN" [(ngModel)] = "pin"/>
+          <br />
+
+          <div class="bottom">
+            <p class="pay">
+              To pay: <span style="font-size: 18px">${{tour===undefined ? "" :  tour.price }} </span>
+            </p>
+            <button nbButton type="submit" class="btn" (click)="buyTicket()">
+              Confirm and pay
+            </button>
+          </div>
+
+          <form action="">
+          </form>
+
+        </div>
+      </div>
+
+      <div class="right-div">
+        <div class="blur"></div>
+        <div class="blur2 blur"></div>
+        <div class="card">
+          
+          <div class="type" [ngStyle]="{ 'background-image': 'url(../../../assets/elements/card/' +  type  + '.png)' }"></div>
+
+          <h1 class="card-number">{{ cardNumber }}</h1>
+          <h2 class="card-valid">{{exp}}</h2>
+          <h3 class="card-name">{{ cardholder }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </nb-layout-column>
+</nb-layout>

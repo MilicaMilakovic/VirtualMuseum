@@ -1,0 +1,67 @@
+<nb-stepper #stepper [linear]="true">
+
+  <nb-step [stepControl]="detailsForm" label="Museum details">
+
+    <form action=""  #detailsForm="ngForm" >
+
+      <input nbInput type="text" fullWidth placeholder="Name" name="name" ngModel/> 
+
+      <input nbInput type="text" fullWidth placeholder="Type" name="type" ngModel />
+      <input nbInput type="text" fullWidth placeholder="Image URL" name="image" ngModel /> 
+      <input nbInput type="text" fullWidth placeholder="Phone" name="phone" ngModel /> 
+      <textarea
+        nbInput
+        fullWidth
+        name="description"
+        ngModel
+        placeholder="Description"
+        style="margin-bottom: 2px"
+      ></textarea>
+
+      <br><br><br>
+
+      <!-- <hr style="background-color: #0095ff; height: 1px" /> -->
+     
+      <button nbButton nbStepperNext (click)="getDetails(detailsForm)" status="basic" style="margin: 10px 0 " fullWidth="" class="btn">
+        NEXT
+      </button>
+    </form>
+  </nb-step>
+
+  <nb-step [stepControl]="locationForm" label="Location ">
+    <form action="" #locationForm="ngForm">
+
+    <nb-select placeholder="Country"  fullWidth [(selected)]="selectedCountry" (selectedChange)="getCities()" style="margin-bottom: 2px; margin-right:2px;" multiple="false">
+      <nb-option value="{{ country.cca2 }}" *ngFor="let country of countries">{{ country.common }}</nb-option>
+    </nb-select>
+
+    <nb-select placeholder="City" fullWidth  [(selected)]="selectedCity" (selectedChange)="getCityInfo()" style="margin-bottom: 2px; margin-right:2px;" disabled="cities.lenght === 0" >
+      <nb-option value="{{ city.city }}" *ngFor="let city of cities">{{ city.city }}</nb-option>
+      
+    </nb-select>
+    
+
+    <input nbInput type="text" placeholder="Address" fullWidth name="address" ngModel/> 
+    <input nbInput type="text" placeholder="Longitude" fullWidth="true" style="margin-right:2px;" value="{{ longitude }}"  />
+    <input nbInput type="text" placeholder="Latitude" fullWidth value="{{ latitude }}" /> <br /> <br> <br> <br>
+    <button nbButton nbStepperNext (click)="getLocationInfo(locationForm)"  status="basic" style="margin: 10px 0 " fullWidth="" class="btn">
+      NEXT
+    </button>
+  </form>
+  </nb-step>
+
+  <nb-step [stepControl]="presentationForm" label="Presentation">
+    <form action="" #presentationForm="ngForm" (ngSubmit)="submitData(presentationForm)">
+      <div class="upload">
+        <p style="margin-right:30px;">Please, upload 5-10 photos.</p> 
+      <!-- <p *ngIf="photos.length === 0 "> No photos uploaded yet.</p> -->
+      
+        <input type="file" class="file-upload" (change)="onPhotosSelected($event)" #fileUpload multiple>
+        <button nbButton type="button" status="info" (click)="fileUpload.click()" ><nb-icon icon="attach-2-outline" style="margin: 10px;"></nb-icon></button>
+          </div>
+      
+        <input type="text" nbInput ngModel name="video" placeholder="YouTube video link" fullWidth="true" />
+      
+        <button nbButton type="submit"  fullWidth="true" status="info"  class="btn">Submit</button>
+    </form>
+  </nb-step>

@@ -1,0 +1,11 @@
+<a href='{{ item.link }}' target="_blank" class="wrapper">
+  <div class="container">
+    <div class="left" [ngStyle]="{'background-image': 'url(' + item.imgUrl + ')'}"></div>
+    <div class="right">
+      <h1 class="title">{{ item.title }}</h1>
+      <p class="description">
+        {{ item.content }}
+      </p>
+    </div>
+  </div>
+</a>

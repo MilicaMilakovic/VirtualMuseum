@@ -1,0 +1,124 @@
+<div class="container">
+  <header #menu>
+    <a href="#"> <div class="logo"></div></a>
+
+    <ul class="sign-in">
+      <li><a routerLink="/login">login</a></li>
+      <li><a routerLink="/register">register</a></li>
+    </ul>
+    <!-- <a href="" class="sign-in" routerLink="/register">register</a> -->
+  </header>
+
+  <div class="first section" id="start">
+    <div class="first-section-circle"></div>
+    <h1>Discover art history</h1>
+    <p>
+      Take a trip through some of the world’s greatest collections on these
+      virtual museum and gallery tours.<br />
+      No queuing necessary!
+    </p>
+    <div class="first-section-arrow"></div>
+    <iframe
+      class="bust"
+      title="Head Of Michelangelo's David, Optimised"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow=" fullscreen; xr-spatial-tracking"
+      xr-spatial-tracking
+      execution-while-out-of-viewport
+      execution-while-not-rendered
+      web-share
+      src="https://sketchfab.com/models/d29af50360624e5e9b1855666475380d/embed?autostart=1&annotation_cycle=1&transparent=1&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_watermark_link=0&ui_watermark=0&ui_hint=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&dnt=1&ui_theme=dark"
+    >
+    </iframe>
+
+    <div class="first-section-blur"></div>
+    <div class="first-section-ellipse1"></div>
+    <div class="first-section-ellipse2"></div>
+    <a class="scroll-btn" href="#second"></a>
+    <div class="signature"></div>
+  </div>
+
+  <div class="second section" id="second">
+    <div class="explore-text">
+      <h2>Explore...</h2>
+    </div>
+    <div class="second-section-blur"></div>
+    <!-- <div class="second-section-circle"></div> -->
+
+    <div class="museums">
+      <a href="https://www.louvre.fr/en" target="_blank" class="museum-div">
+        <div class="louvre"></div>
+        <p>Musée du Louvre</p>
+      </a>
+
+      <a
+        href="https://m.museivaticani.va/content/museivaticani-mobile/en.html"
+        target="_blank"
+        class="museum-div"
+      >
+        <div class="vatican"></div>
+        <p>Musei Vaticani</p>
+      </a>
+
+      <a
+        href="https://www.britishmuseum.org/"
+        target="_blank"
+        class="museum-div"
+      >
+        <div class="british"></div>
+        <p>The British Museum</p>
+      </a>
+    </div>
+    <div class="more">
+      <p>& many more...</p>
+    </div>
+  </div>
+
+ 
+
+  <div class="third section">  
+    <!-- <video autoplay muted loop>
+    <source type="video/mp4" src="https://api-www.louvre.fr/sites/default/files/videos/video_5_4_960/video.mp4">
+    </video> -->
+  </div>
+
+  <div class="separator">
+    <div class="icon-1 icon"></div>
+    <div class="icon-2 icon"></div>
+    <div class="icon-3 icon"></div>
+    <div class="icon-4 icon"></div>
+  </div>
+
+  <div class="fourth section" #fourth>
+    <div class="fourth-section-blur"></div>
+    <h1>Book a tour now!</h1>
+  </div>
+
+  <div class="fifth section" #fifth>
+    <div class="fifth-section-blur" #fifth_blur></div>
+    <div class="fifth-section-circle" #fifth_circle></div>
+
+    <div class="fifth-left" #fifth_left>
+      <p>
+        Get ready to feed your cultural fix and indulge in a few armchair
+        travels. <br> Here are the best virtual tours across the globe from classical
+        Dutch art and history to Cézanne, Keith Haring to Picasso.
+      </p>
+    </div>
+    <div class="nike-of-samothrake" #nike></div>
+    <div class="fifth-right" #fifth_right>
+      <p>
+        Take a trip through some of the world’s greatest collections on these
+        virtual museum and gallery tours, no queuing necessary
+      </p>
+    </div>
+    <a href="#start" class="scroll-up-btn"></a>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+
+<script src="../../assets/js/hover.js"></script>

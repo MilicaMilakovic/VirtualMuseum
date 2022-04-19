@@ -1,0 +1,46 @@
+<div class="container">
+
+    <!-- <img *ngFor="let url of photoURLs" src="{{ url}}" alt=""> -->
+    
+    
+
+    <p *ngIf="expired; else showContent"  style="color: white; margin: 45vh auto; width: 100%; text-align: center;">{{ notification }}</p>
+    <ng-template #showContent>
+        <div class="title">
+            <h1> Welcome to the {{ museum }}</h1>
+        </div>
+        <div *ngFor="let url of photoURLs" class="img-container" >       
+            <div class="mask">
+                <img src="{{ url }}" alt="">
+            </div>
+        </div>
+        <div class="blur blur1"></div>
+        <div class="blur blur2"></div>
+        <div class="blur blur3"></div>
+        <div class="blur blur4"></div>
+        <div class="blur blur5"></div>
+        <div class="blur blur6"></div>
+        <div class="blur blur7"></div>
+        <div class="blur blur8"></div>
+
+        <div class="video-div">
+            <iframe id="video"
+                [src]="video"
+                [frameBorder]="0">
+            </iframe>
+            <div class="blur"></div>
+    </div>
+    </ng-template>
+
+    
+    <!-- <div class="blur blur9"></div> -->
+    <!-- <div class="blur blur10"></div> -->
+
+    <!-- <div class="img-container" style="margin: 0 auto; width: 100%;">
+        <div class="mask" style="width: 100%;">
+            <img src="{{ tour.museum.image }}" alt="">
+        </div>
+    </div>  -->
+    
+  
+</div>

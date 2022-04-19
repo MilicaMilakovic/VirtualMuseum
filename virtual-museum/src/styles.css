@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Castilon";
+  src: local("Castilon"), url(./assets/fonts/Castilon.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Notera";
+  src: local("Notera"), url(./assets/fonts/Notera.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Dala Moa Light";
+  src: local("Dala Moa Light"),
+    url(./assets/fonts/DalaMoaLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Dala Moa Medium";
+  src: local("Dala Moa Medium"),
+    url(./assets/fonts/DalaMoaMedium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cera Bold";
+  src: local("Cera Bold"),
+    url(./assets/fonts/CeraBold.otf) format("opentype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #161c1e;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #9fe4e4;
+}

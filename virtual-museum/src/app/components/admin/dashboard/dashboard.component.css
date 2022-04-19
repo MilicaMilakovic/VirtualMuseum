@@ -1,0 +1,83 @@
+.container{
+    width: 100%;
+    height: 130vh;
+    background-color:#E5EBF0;
+    /* background-color: rgba(49, 63, 67, 0.162); */
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.options {
+    width: 95%;
+    min-height: 15vh;
+    /* background-color: red; */
+
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-around;
+
+    border-bottom: 1px solid #141a1b35;
+}
+
+a{
+    color: #313F43;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+a:hover{
+    font-size: 19px;
+    color: #141a1b;
+ 
+}
+
+.content{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.data{
+    width: 100%;
+    min-height: 20%;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 30px;
+}
+
+nb-card{
+    margin: 15px;
+}
+
+.graph{
+    width: 100%;
+    flex-grow: 1;
+    
+    /* background-color: red; */
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myChart{
+    max-width: 90%;
+    max-height: 100%;
+}

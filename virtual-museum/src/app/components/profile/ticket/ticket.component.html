@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="left">
+    <div class="image"></div>
+    <div class="info">
+      <h1>
+        <span class="explore">explore</span> <br />
+        {{ ticket.tour.museum.name }}
+      </h1>
+      <div class="line"></div>
+
+      <p><b>Start:</b> {{ time }}</p>
+      <p><b>Duration:</b> {{ticket.tour.duration}} hrs</p>
+      <a href="" routerLink="/tour" (click)="log()" class="start-btn">start tour</a>
+
+    </div>
+  </div>
+  <div class="right">
+    <div class="barcode"></div>
+  </div>
+</div>

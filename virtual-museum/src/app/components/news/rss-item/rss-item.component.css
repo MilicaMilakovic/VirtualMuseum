@@ -1,0 +1,105 @@
+.container{
+    width: 630px;
+    min-height: 300px ;
+    height: 300px;
+    background-color: #151b1da1;
+    margin: 2vw;
+
+    padding: 1%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    /* border-bottom: 1px solid gray; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    /* transition: all 1s ease-out; */
+}
+a{
+    text-decoration: none;
+}
+
+.left {
+    min-width: 40%;
+    min-height: 85%;
+    margin: 1%;
+    align-self: center;
+    /* background-color: green; */
+    
+    background-image: url('https://img.huffingtonpost.com/asset/623b8d081e0000dc3c1b0ecc.jpeg?ops=scalefit_720_noupscale&format=webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    opacity: 0.5;
+    transition: all 0.7s ease;
+  
+}
+.right{
+    width: 60%;
+    height: 100%;
+    /* background-color: blue; */
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 10px;
+
+}
+
+h1{
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+    color: white;
+    transition: all 1s ease;
+}
+
+p{
+    color: #c7c7c7;
+}
+
+.container:hover .left{
+   opacity: 1;
+    /* width: 45%; */
+   
+}
+
+@media screen and (max-width:800px){
+    .container{
+        width: 90vw;
+        min-height: 370px;
+        max-height: 370px;
+        padding: 10px;
+        height: 370px;
+        /* overflow: auto; */
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .left{
+        width: 100%;
+        background-size: cover;
+        background-position: top;
+        max-height: 40%;
+        height: 40%;
+        min-height: 40%;
+    }
+    .right{
+        flex-grow: 1;
+        width: 100%;
+    }
+}
+

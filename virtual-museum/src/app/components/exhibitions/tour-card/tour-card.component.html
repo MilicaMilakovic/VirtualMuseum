@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="img"></div>
+  <div class="price-div">
+    <p>$ {{ tour.price }}</p>
+  </div>
+
+  <h1>
+    <span class="explore">explore</span> <br />
+    {{ tour.museum.name }}
+  </h1>
+  <div class="line"></div>
+
+  <p><b>Start:</b>  {{ time }}</p>
+  <p><b>Duration:</b>  {{ tour.duration }} hrs</p>
+  <a href="" [routerLink]="['/checkout', tour.id]" class="buy-btn">Buy ticket</a>
+</div>

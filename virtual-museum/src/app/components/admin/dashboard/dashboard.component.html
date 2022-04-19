@@ -1,0 +1,38 @@
+<nb-layout>
+  <nb-layout-column style="padding: 0; margin: 0;">
+    
+    <div class="container">
+      <app-nav></app-nav>
+
+      <div class="options">
+        <a href="{{link}}" target="_blank"> <nb-icon icon="people-outline"></nb-icon>
+          Manage users</a>
+        <a href="{{ reportsLink }}" target="_blank">     <nb-icon icon="download-outline"></nb-icon>
+          Download reports</a>
+      </div>
+
+     
+      <div class="content">
+        <div class="data">
+          <nb-card>
+            <nb-card-body>
+              Number of registered users : {{ registeredUsers }}
+            </nb-card-body>
+          </nb-card>
+          <nb-card>
+            <nb-card-body>
+              Number of currently active users : {{ online }}
+            </nb-card-body>
+          </nb-card>
+         </div>
+
+        <div class="graph">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+   <app-footer></app-footer>
+  </nb-layout-column>
+</nb-layout>
+<!-- <app-footer></app-footer> -->

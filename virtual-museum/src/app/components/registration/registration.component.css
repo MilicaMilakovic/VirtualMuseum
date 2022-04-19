@@ -1,0 +1,277 @@
+.container {
+  width: 100%;
+  height: 110vh;
+
+  background-color: #313f43;
+  background-image: url("../../../assets/elements/noise.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  z-index: 2;
+  /* background-color: red; */
+
+  /* position: fixed; */
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 3%;
+
+  margin-top: 4vh;
+}
+
+header .logo {
+  width: 10vh;
+  height: 10vh;
+  /* background-color: blue; */
+
+  background-image: url("../../../assets/elements/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  margin-right: auto;
+  margin-left: auto;
+  justify-self: center;
+}
+
+.options {
+  justify-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 15vw;
+  /* background-color: red; */
+}
+.options a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 5vw;
+  font-family: "Dala Moa Light";
+}
+
+.content {
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  /* background-color: red; */
+}
+
+.left {
+  width: 40%;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1%;
+
+  perspective: 1000px;
+
+  transform-style: preserve-3d;
+}
+.right {
+  height: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  z-index: 100;
+  /* background-color: yellow; */
+}
+
+.right h2 {
+  font-family: "Dala Moa Light";
+  letter-spacing: 0.1em;
+  font-size: 3vh;
+  background: -webkit-linear-gradient(#9fe4e4, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card {
+  /* background-color: red; */
+
+  min-height: 100%;
+  height: 100%;
+  width: 80%;
+  /* 
+    margin-left: 4vw;
+    margin-bottom: 2vw; */
+
+  background-image: url("../../../assets/elements/card.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.card img {
+  width: 60%;
+  transition: all 0.75s ease-out;
+}
+.input {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: white;
+}
+.ellipse1 {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+
+  /* background-color: rebeccapurple; */
+  z-index: -100;
+  top: 0;
+  left: 2vh;
+  background-image: url("../../../assets/elements/ellipse.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blur1 {
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+
+  /* background-color: rebeccapurple; */
+  bottom: 2vh;
+  left: 7vh;
+  background-image: url("../../../assets/elements/ellipse-blur.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h1 {
+  position: absolute;
+  left: 35vw;
+
+  font-family: "Notera";
+  color: #75a3b0;
+  opacity: 0.2;
+  text-shadow: #f3f5f5;
+
+  font-size: 8vw;
+  /* bottom: 0; */
+}
+
+.right form {
+ 
+  width: 60%;
+  height: 80%;
+  padding: 5%;
+  /* margin-top: 2%; */
+  /* background-color: blue; */
+  padding: 10px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+input {
+  margin-bottom: 1%;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #161c1e;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5%;
+}
+
+footer img {
+  height: 75%;
+
+  width: auto;
+  margin-left: 2%;
+}
+footer p {
+  text-align: center;
+  margin-left: -8%;
+
+  font-family: "Notera";
+  color: rgba(117, 163, 176, 0.35);
+  font-size: 4vh;
+}
+
+
+.ellipse2 {
+  width: 50vh;
+  height: 50vh;
+
+  position: absolute;
+
+  right: 5vw;
+  top: 0;
+  background-image: url("../../../assets/elements/ellipse2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media only screen and (max-width: 800px) {
+  .content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .right {
+    width: 100%;
+    flex-grow: 1;
+    order: 1;
+  }
+  .left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    order: 2;
+  }
+
+  .left img {
+    /* height: 100%; */
+    width: 30%;
+  }
+
+  .right h2{
+    font-size: 16px;
+    /* background-color: red; */
+  }
+
+  h1 {
+    left: 1vw;
+    top: 3vw;
+  }
+}

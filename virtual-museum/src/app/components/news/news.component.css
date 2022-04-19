@@ -1,0 +1,165 @@
+.container {
+  width: 100%;
+  height: 200vh;
+
+  background-color: #313f43;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content {
+  width: 100%;
+  flex-grow: 1;
+  /* height: 200vh; */
+  /* background-color: red; */
+  z-index: 90;
+  margin-top: 10vh;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  /* flex-wrap: wrap; */
+
+  padding: 25px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; 
+ 
+}
+
+
+
+.text {
+  /* background-color: blue; */
+  height: 20vh;
+  width: 80%;
+  
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 4vh 0;
+}
+
+h2{
+  /* background-color: red; */
+  
+  font-family: "Montserrat", Verdana, sans-serif;
+  /* color: black; */
+  background: -webkit-linear-gradient(#9fe4e4, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+
+}
+
+p{
+  /* background-color: red; */
+  margin: 3vh 0;
+  width: 50%;
+  height: 40%;
+  font-family: 'Garramond';
+  font-size: 18px;
+  letter-spacing: 1.6px;
+  color: #efeff0;
+}
+h1 {
+  font-family: "Notera";
+  color: #75a3b0;
+  opacity: 0.06;
+  /* letter-spacing: 0.25em; */
+  margin-left: 5vw;
+  font-size: 8em;
+ 
+  position: absolute;
+  right: 5vw;
+  top: 7vh;
+}
+
+hr {
+  margin: 3vh auto;
+  width: 90%;
+  opacity: 0.04;
+  color: #232c30;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+
+.news {
+  width: 100%;
+  flex-grow: 1;
+  /* min-height: 100vh; */
+  /* background-color: rgb(113, 113, 131); */
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  overflow-y: scroll;
+  padding: 2%;
+}
+
+.news::-webkit-scrollbar {
+  display: none;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.ellipse1{
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    /* background-color: red; */
+
+    top: 0;
+    right: 0;
+
+    background-image: url('../../../assets/elements/ellipse.png');
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    opacity: 0.3;
+}
+
+.venus-img {
+  position: absolute;
+  bottom: -90vh;
+  right: 0;
+  /* top: 0vh; */
+  align-self: flex-end;
+  height: 100%;
+  width: 100%;
+
+  z-index: -80;
+  opacity: 0.1;
+  background-image: url("../../../assets/elements/the_birth_of_venus.png");
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width:800px){
+  p{
+    font-size: 14px;
+    margin: 0;
+    width: 100%;
+  }
+}

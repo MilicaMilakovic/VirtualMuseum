@@ -1,0 +1,21 @@
+<form action="" (ngSubmit)="submitForm(f)" #f="ngForm">
+
+  <nb-select placeholder="Museum" fullWidth="true"  [(selected)]="selectedMuseum">
+    <nb-option value="{{ museum.name }}" *ngFor="let museum of museums">{{ museum.name}}</nb-option>
+  </nb-select>
+  <br />
+
+  <input    nbInput    placeholder="Pick Date"  ngModel name="start"  fullWidth=""    [nbDatepicker]="dateTimePicker"  />
+  <nb-date-timepicker #dateTimePicker ></nb-date-timepicker> <br />
+
+  <input    type="number"    min="1"    nbInput  ngModel name="duration"  placeholder="Duration [hours]"    fullWidth="true"  />
+  <br />
+
+  <input type="text" nbInput ngModel name="price" placeholder="Price [$]" fullWidth="true" />
+  <br />
+
+ 
+
+  <button nbButton type="submit" fullWidth="true" status="info" style="margin-top: 10px;">Submit</button>
+
+</form>

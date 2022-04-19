@@ -1,0 +1,210 @@
+.container {
+  width: 100%;
+  height: 200vh;
+
+  background-color: #313f43;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text {
+  height: 20vh;
+  width: 80%;
+  /* background-color: red; */
+}
+
+h2 {
+  font-family: "Montserrat", Verdana, sans-serif;
+  /* color: black; */
+  /* background-color: red; */
+  background: -webkit-linear-gradient(#9fe4e4, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+  margin-right: auto;
+  margin-left: 3vw;
+  margin-bottom: 10px;
+}
+.text{
+  width: 90%;
+  min-height: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-self: center;
+  padding: 15px;
+  /* background-color: rebeccapurple; */
+}
+h3 {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+  margin-right: auto;
+  margin-left: 10vw;
+  margin-bottom: 30px;
+  font-family: "Castilon";
+  font-weight: bold;
+  background: -webkit-linear-gradient(#909090, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #909090;
+  letter-spacing: 1px;
+}
+
+.content {
+  width: 100%;
+  flex-grow: 1;
+
+  /* background-color: rgb(221, 147, 147); */
+  z-index: 90;
+  margin-top: 15vh;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* flex-wrap: wrap; */
+
+  padding: 25px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.tickets {
+  width: 100%;
+  min-height: 90%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.tickets::-webkit-scrollbar {
+  display: none;
+}
+
+.tickets p {
+  color: white;
+  letter-spacing: 1.6px;
+  margin: 20vh auto;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  /* margin: 3vh auto; */
+  background-color: #313f43;
+  width: 90%;
+  opacity: 0.1;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.pearl-img {
+  position: absolute;
+  bottom: -90vh;
+  right: 0;
+  /* top: 0vh; */
+  align-self: flex-end;
+  height: 100%;
+  width: 100%;
+
+  z-index: -80;
+  opacity: 0.4;
+  background-image: url("../../../assets/elements/creation-of-adam.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.content h1 {
+  font-family: "Notera";
+  color: #75a3b0;
+  opacity: 0.06;
+  /* letter-spacing: 0.25em; */
+  margin-left: 5vw;
+  font-size: 8em;
+  margin-bottom: 0;
+  position: absolute;
+  right: 5vw;
+  top: 7vh;
+}
+
+.ellipse1 {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  /* background-color: red; */
+
+  top: 0;
+  right: 0;
+
+  background-image: url("../../../assets/elements/ellipse2.png");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  opacity: 0.3;
+}
+.ellipse2 {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  /* background-color: red; */
+
+  top: 20vh;
+  left: 0;
+
+  background-image: url("../../../assets/elements/blur.png");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  opacity: 0.3;
+}
+.ellipse3 {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  /* background-color: red; */
+
+  bottom: -50vh;
+  right: 7vw;
+
+  background-image: url("../../../assets/elements/blur.png");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  opacity: 0.3;
+  z-index: -100;
+}
+
+@media screen and (max-width: 800px) {
+    h2{
+      font-size: 18px !important;
+      line-height: 18px;
+      width: 60%;
+    }
+    h3{
+      font-size: 17px !important;
+    }
+
+    .tickets{
+      justify-content: center;
+    }
+}

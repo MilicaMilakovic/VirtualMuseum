@@ -1,0 +1,271 @@
+.container {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #313f43;
+  background-image: url("../../../assets/elements/noise.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  /* background-color: red; */
+
+  /* position: fixed; */
+
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 3%;
+
+  margin-top: 4vh;
+}
+
+header .logo {
+  width: 10vh;
+  height: 10vh;
+  /* background-color: blue; */
+
+  background-image: url("../../../assets/elements/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  margin-right: auto;
+  margin-left: auto;
+  justify-self: center;
+}
+
+.options {
+  justify-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 15vw;
+  /* background-color: red; */
+}
+.options a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 5vw;
+  font-family: "Dala Moa Light";
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* overflow-x: hidden; */
+  overflow: hidden;
+
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  /* background-color: red; */
+}
+
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+.left {
+  width: 40%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1%;
+
+  perspective: 1000px;
+
+  transform-style: preserve-3d;
+}
+.right {
+  height: 100%;
+  flex-grow: 1;
+  z-index: 1;
+
+  margin: 50px;
+  margin-bottom: 0;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: yellow; */
+}
+.form-div {
+  width: 80%;
+  height: 90%;
+  /* background-color: red; */
+  padding: 20px;
+  margin-top: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.right h2 {
+  font-family: "Castilon";
+  letter-spacing: 5px;
+  font-size: 35px;
+  line-height: 35px;
+  background: -webkit-linear-gradient(#9fe4e4, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.login-text {
+  font-size: 18px;
+  color: #909090;
+  font-family: "Castilon";
+  text-align: center;
+  margin-top: 0;
+  letter-spacing: 1.5px;
+}
+form{
+  width: 80%;
+  min-height: 60%;
+}
+.card {
+  /* background-color: red; */
+
+  min-height: 100%;
+  height: 100%;
+  width: 80%;
+  /* 
+      margin-left: 4vw;
+      margin-bottom: 2vw; */
+
+  background-image: url("../../../assets/elements/card.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.card img {
+  width: 60%;
+  transition: all 0.75s ease-out;
+}
+
+.ellipse1 {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+
+  /* background-color: rebeccapurple; */
+  z-index: -100;
+  top: 0;
+  left: 2vh;
+  background-image: url("../../../assets/elements/ellipse.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blur1 {
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+
+  /* background-color: rebeccapurple; */
+  bottom: 2vh;
+  left: 7vh;
+  background-image: url("../../../assets/elements/ellipse-blur.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #161c1e;
+}
+
+h1 {
+  position: absolute;
+  left: 35vw;
+
+  font-family: "Notera";
+  color: #75a3b0;
+  opacity: 0.2;
+  text-shadow: #f3f5f5;
+
+  /* background-color: red; */
+  font-size: 8vw;
+  bottom: 0;
+}
+
+.ellipse2 {
+  width: 50vh;
+  height: 50vh;
+
+  position: absolute;
+
+  right: 5vw;
+  top: 0;
+
+  background-image: url("../../../assets/elements/ellipse2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+  }
+  .right {
+    width: 100%;
+    flex-grow: 1;
+    order: 1;
+  }
+  .left {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    height: 40%;
+    order: 2;
+  }
+  h2 {
+    text-align: center;
+  }
+  h1{
+    top:  3vh;
+    left: 5%;
+
+  }
+
+  .left img {
+    /* height: 100%; */
+    width: 30%;
+  }
+}

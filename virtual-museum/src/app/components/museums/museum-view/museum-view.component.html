@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="circle"></div>
+  <h1 class="title">{{ museum.name }}</h1>
+
+  <div
+    class="image"
+    [ngStyle]="{ 'background-image': 'url(' + museum.image + ')' }"
+  ></div>
+
+  <div class="info">
+    <div class="icon-div">
+      <div class="phone icon"></div>
+      <p>{{ museum.phone }}</p>
+    </div>
+    <div class="icon-div">
+      <div class="location icon"></div>
+      <p>{{ museum.address }}</p>
+    </div>
+    <div class="icon-div">
+      <div class="type icon"></div>
+      <p>{{ museum.type }}</p>
+    </div>
+  </div>
+
+  <div class="about-div">
+    <div class="text">
+      <h2 class="about-museum">about the museum</h2>
+      <p class="description">
+        {{ museum.description }}
+      </p>
+    </div>
+  </div>
+
+  <div class="img-reveal"></div>
+
+  <div class="tours-div">
+    <div class="book-title">
+      <h2 class="">Book a virtual tour</h2>
+      <div class="line"></div>
+    </div>
+    <!-- <div class="tours-cover"></div> -->
+    
+    <div class="tours">
+      <p *ngIf="tours.length === 0 " style="align-self: center;">no tours available at the moment.</p>
+       <app-tour-card *ngFor="let tour of tours" [tour]=tour></app-tour-card>   
+    </div>
+  </div>
+  <div
+    class="img-reveal"
+    style="height: 60vh"
+    [ngStyle]="{ 'background-image': 'url(' + museum.image + ')' }"
+  ></div>
+
+  <div class="map">
+    <div class="map-text">
+      <h2 class="">Find us on map</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="google-map">      
+        <iframe
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          [src]="map"
+        ></iframe
+        >      
+    </div>
+  </div>
+
+  <!--           src="https://maps.google.com/maps?width=100%25&amp;height=100%&amp;hl=en&amp;q=52.360001,4.885278+(Virtual%20Museum)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+ -->
+  <div class="bottom-div">
+    <div class="weather">
+
+      <div class="weather-card">
+        <div class="weather-icon"></div>
+        <p class="city">{{ weather===undefined? "": weather[0].cityName }}</p>
+        <p class="temp">{{ weather===undefined? "": weather[0].temperature }}°C</p>
+      </div>
+      
+      <div class="weather-card">
+        <div class="weather-icon"></div>
+        <p class="city">{{ weather===undefined? "": weather[1].cityName }}</p>
+        <p class="temp">{{ weather===undefined? "": weather[1].temperature }}°C</p>
+      </div>
+      <div class="weather-card">
+        <div class="weather-icon"></div>
+        <p class="city">{{ weather===undefined? "": weather[2].cityName }}</p>
+        <p class="temp">{{ weather===undefined? "": weather[2].temperature }}°C</p>
+      </div>
+    </div>
+    <div class="blur blur4"></div>
+    <div class="blur blur5"></div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

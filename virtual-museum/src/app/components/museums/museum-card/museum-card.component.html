@@ -1,0 +1,14 @@
+<a class="wrapper" (click)="goToDetails()">
+  <!-- <div class="element"></div> -->
+  <div class="container">
+    <div class="image" [ngStyle]="{'background-image': 'url(' + image + ')'}" ></div>
+   
+    <div class="name">
+      <h1>{{ museum.name }}</h1>
+    </div>
+    <div class="line"></div>
+    <div class="location">
+      <h2>{{ location }}</h2>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,85 @@
+<nb-layout>
+  <nb-layout-column style="padding: 0">
+    <div class="container">
+      <header>
+        <a href="" class="logo"></a>
+      </header>
+
+      <div class="content">
+        <h1>Login</h1>
+        <div class="ellipse1"></div>
+        <div class="ellipse2"></div>
+
+        <div class="left">
+          <div class="card">
+            <img
+              src="../../../assets/elements/head.png"
+              alt="david"
+              class="david"
+            />
+          </div>
+        </div>
+
+        <div class="right">
+          <h2>Welcome back!</h2>
+          <p class="login-text">Please login to your account.</p>
+
+          <div class="form-div">
+            <form action="" (ngSubmit)="logIn(f)" #f="ngForm">
+              <input
+                type="text"
+                ngModel
+                name="username"
+                required
+                nbInput
+                fullWidth
+                status="basic"
+                placeholder="Username"
+                style="
+                  background-color: #46595c75;
+                  margin: 5px;
+                  border-radius: 3;
+                  color: white;
+                "
+              />
+              <nb-form-field>
+                <input
+                  [type]="getInputType()"
+                  fullWidth
+                  required
+                  ngModel 
+                  name="password"
+                  nbInput
+                  placeholder="Password"
+                  style="
+                    background-color: #46595c75;
+                    margin: 5px;
+                    border-radius: 3;
+                    color: white;
+                    
+                  "
+                />
+                <button nbSuffix type="button"  nbButton ghost (click)="toggleShowPassword()">
+                  <nb-icon
+                    [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'"
+                    pack="eva"
+                    [attr.aria-label]="
+                      showPassword ? 'hide password' : 'show password'
+                    "
+                  >
+                  </nb-icon>
+                </button>
+              </nb-form-field>
+
+              <button nbButton type="submit" [disabled]="!f.valid" style="width: 40%; margin-top: 50px;  align-self: center; margin-left: 60%; ">Login</button>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="blur1"></div>
+      </div>
+    </div>
+    <app-footer style="width: 100%"></app-footer>
+  </nb-layout-column>
+</nb-layout>

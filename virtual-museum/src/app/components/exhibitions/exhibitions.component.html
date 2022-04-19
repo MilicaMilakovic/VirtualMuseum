@@ -1,0 +1,25 @@
+<nb-layout>
+  <nb-layout-column style="padding: 0">
+    <app-navigation></app-navigation>
+    <div class="container">
+    <div class="content">
+      <div class="ellipse1"></div>
+      <div class="ellipse2"></div>
+      <div class="ellipse3"></div>
+
+      <div class="pearl-img"></div>
+      <h1>exhibitions</h1>
+
+      <h2>Currently active tours</h2>
+
+      <hr />
+      <div class="tours">
+        <p *ngIf="tours.length === 0" style="color: white; margin: 30vh auto;">No tours.</p>
+        <app-tour-card *ngFor="let tour of tours" [tour]="tour"></app-tour-card>
+      </div>
+    </div>
+    </div>
+
+    <app-footer></app-footer>
+  </nb-layout-column>
+</nb-layout>

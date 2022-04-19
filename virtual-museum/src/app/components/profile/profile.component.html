@@ -1,0 +1,33 @@
+<nb-layout>
+    <nb-layout-column style="padding: 0" class="container">
+      <app-navigation></app-navigation>
+      <div class="content">
+        <div class="ellipse1"></div>
+        <div class="ellipse2"></div>
+        <div class="ellipse3"></div>
+  
+        <div class="pearl-img"></div>
+        <!-- <h1>exhibitions</h1> -->
+  
+        <div class="text">
+        <h2 style="font-family: 'Castilon'; font-size: 32px;">Welcome back, {{ user.firstName }} !</h2>
+        <button nbButton status="basic" outline="" style="z-index: 100;" size="small" (click)="logOut()">LOG OUT</button>
+
+       </div>
+        <hr />
+      
+
+        <h3>My tickets</h3>
+  
+        
+        <div class="tickets">
+          <p *ngIf="user.tickets.length === 0">You haven't bought any tickets yet.</p>
+         <app-ticket *ngFor="let ticket of user.tickets " [ticket]="ticket"></app-ticket>
+         
+        </div>
+      </div>
+  
+      <app-footer></app-footer>
+    </nb-layout-column>
+  </nb-layout>
+  

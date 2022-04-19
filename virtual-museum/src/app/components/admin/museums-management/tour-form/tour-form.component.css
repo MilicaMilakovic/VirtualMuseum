@@ -1,0 +1,29 @@
+*{
+    margin: 1px;
+}
+nb-card {
+  min-width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+form{
+    min-width: 400px;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    padding: 0;
+}
+
+.file-upload{
+    display: none;
+}
+
+.upload{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}

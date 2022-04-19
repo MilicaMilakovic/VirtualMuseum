@@ -1,0 +1,11 @@
+body{
+   
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 800px) {
+	.container-fluid{
+	overflow-x : scroll;
+	}	
+}

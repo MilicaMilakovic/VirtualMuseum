@@ -1,0 +1,32 @@
+<nb-layout>
+  <nb-layout-column style="padding: 0" class="container">
+    
+      <app-navigation></app-navigation>
+    
+    
+    <div class="search">
+      <nb-search
+        style="height: 100%"
+        type="rotate-layout"
+        placeholder="Search museums"
+      ></nb-search>
+    </div>
+    <hr />  
+    
+    <div class="content">
+      <p *ngIf="museums.length===0">no museums found.</p>
+      <div class="circle"></div>
+      <div class="ellipse1"></div>
+
+      <h1>museums</h1>
+      <div class="van-gogh-img"></div>
+
+      
+      <app-museum-card *ngFor="let m of museums" [museum]=m ></app-museum-card>
+ 
+      
+    </div>
+
+    <app-footer></app-footer>
+  </nb-layout-column>
+</nb-layout>

@@ -1,0 +1,84 @@
+<nb-layout>
+  <nb-layout-column style="padding: 0; margin: 0">
+    <div class="container">
+      <app-nav></app-nav>
+      <div class="controls">
+        <h1>Museums</h1>
+        <div class="buttons">
+          <button
+            nbButton
+            outline
+            status="info"
+            style="margin-right: 10px"
+            (click)="openWindow()"
+          >
+            ADD MUSEUM
+          </button>
+          <button nbButton outline status="info" (click)="addTour()">ADD TOUR</button>
+        </div>
+      </div>
+
+      <ng-template #contentTemplate let-data>
+        <!-- <p style="margin-left: 10px ;">Please, fill in the data.</p> -->
+        <form action="">
+          <input nbInput type="text" fullWidth placeholder="Name"  /> <br />          
+
+          <input nbInput type="text" fullWidth placeholder="Type" /> <br />
+          <input nbInput type="text" fullWidth placeholder="Image URL" /> <br />
+          <input nbInput type="text" fullWidth placeholder="Phone" /> <br />
+          <textarea nbInput fullWidth placeholder="Description" style="margin-bottom: 2px";></textarea>
+
+          <hr style="background-color: #0095ff; height: 1px;">
+          <nb-select placeholder="Country" style="margin-bottom: 2px;">
+            <nb-option value="">Option empty</nb-option>
+            <nb-option value="0">Option 0</nb-option>
+            <nb-option value="1">Option 1</nb-option>
+            <nb-option value="2">Option 2</nb-option>
+            <nb-option value="3">Option 3</nb-option>
+            <nb-option value="4">Option 4</nb-option>
+          </nb-select> 
+
+          <nb-select placeholder="City" style="margin-bottom: 2px;">
+            <nb-option value="">Option empty</nb-option>
+            <nb-option value="0">Option 0</nb-option>
+            <nb-option value="1">Option 1</nb-option>
+            <nb-option value="2">Option 2</nb-option>
+            <nb-option value="3">Option 3</nb-option>
+            <nb-option value="4">Option 4</nb-option>
+          </nb-select> <br>
+
+          <input nbInput type="text" placeholder="Address" fullWidth/> <br> 
+          <input nbInput type="text" placeholder="Longitude" /> 
+          <input nbInput type="text" placeholder="Latitude" /> <br />
+
+          <button nbButton status="basic" style="margin-bottom: 2px;" fullWidth="">SUBMIT</button>
+
+        </form>
+      </ng-template>
+
+      <hr width="90%" style="background-color: #0095ff" />
+      <div class="content">
+        <nb-card class="card" accent="info" *ngFor="let museum of museums">
+          <nb-card-header>{{ museum.name }}</nb-card-header>
+          <nb-card-body>
+            {{ museum.description }}
+            <hr style="background-color: gray; opacity: 0.3" />
+            <br />
+            <nb-icon icon="phone-outline"> </nb-icon> &nbsp;
+            <b>{{ museum.phone }}</b> <br />
+            <nb-icon icon="map-outline"> </nb-icon> &nbsp;
+            <b>{{ museum.address }}</b> <br />
+            <nb-icon icon="brush-outline"> </nb-icon> &nbsp;
+            <b>{{ museum.type }}</b> <br />
+          </nb-card-body>
+
+          <nb-card-footer
+            >{{ museum.city }}, {{ museum.country }}</nb-card-footer
+          >
+        </nb-card>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </nb-layout-column>
+</nb-layout>
