@@ -1,5 +1,5 @@
 # Virtual Museums
-Internet Programming Fullstack Project | University project 2020
+Internet Programming Fullstack Project | University project 2022
 
 - Virtual Museums
     - Angular Frontend
