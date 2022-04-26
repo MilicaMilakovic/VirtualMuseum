@@ -65,13 +65,17 @@ User can find all the tickets they have bought on their profile. Each tour has i
 
 https://user-images.githubusercontent.com/23185716/164051437-f7eac5cf-681d-4851-9837-3cfec2492f4a.mp4
 
-<br/> <br/>
-
->
->  All pages are responsive!
->
 
 <br/>
+
+### News
+
+Users can read news from arts and culture. The articles are provided by consuming a <a href="https://www.huffpost.com/section/arts/feed" title="RSS feed" >RSS feed</a>. 
+
+
+https://user-images.githubusercontent.com/23185716/165383168-94c077a3-064c-48e4-b7df-44833453c1ad.mp4
+
+</br>
 
 ## Administrator
 
@@ -80,5 +84,17 @@ Administrator can add a new museum, or add a tour for a specific museum. They ca
 an administrator is taken to the JSP part of the application, where they can perform CRUD operations on users accounts, approve registration and reset user's password to random value. 
 
 https://user-images.githubusercontent.com/23185716/164053729-3668e1e8-7f51-493d-ad97-d3ce21ee9fad.mp4
+
+## 
+
+All pages are responsive!
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/23185716/165381634-46e4b32b-b442-4198-9682-d3f00f15ca2b.png" width="230" />
+  <img src="https://user-images.githubusercontent.com/23185716/165382194-8096c390-cb12-45bb-9344-38d0f5fd1a88.png" width="230" /> 
+  <img src="https://user-images.githubusercontent.com/23185716/165382148-5182abf1-723b-4333-889f-a58f07bb3c74.png" width="230" />
+  <img src="https://user-images.githubusercontent.com/23185716/165382225-17b55eb9-20cc-434a-9ed6-f42d5a7984e3.png" width="230" />
+</p>
+
+
 
 
