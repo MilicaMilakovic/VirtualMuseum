@@ -9,6 +9,9 @@ Internet Programming Fullstack Project | University project 2020
 - Virtual Bank 
     - JSP App
 
+- Database
+    - MySQL
+
 <hr/>
 
 ## Virtual Museums
